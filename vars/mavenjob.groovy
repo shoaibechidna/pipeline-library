@@ -2,7 +2,7 @@
 
 def any(String test = 'false') {
   echo "received test=${test}"
-  @Library('utils') import org.foo.Utilities
+  @Library('utils')_ import org.foo.Utilities
   def utils = new Utilities(this)
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
