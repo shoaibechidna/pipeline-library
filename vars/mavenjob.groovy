@@ -4,7 +4,9 @@ def call(String test = 'false') {
   echo "received test=${test}"
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
-    cd spring-petclinic
+    steps {
+      shell('cd spring-petclinic')
+    }
     mavenJob('mavenjob') {
       goals('clean install -DskipTests')
     }
