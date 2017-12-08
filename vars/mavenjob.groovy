@@ -2,12 +2,12 @@
 
 def any(String test = 'false') {
   echo "received test=${test}"
+  @Library('utils') import org.foo.Utilities
+  def utils = new Utilities(this)
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
-    steps {
-    maven {
-      goals('clean install -DskipTests')
-    }
+    node {
+      utils.mvn 'clean install -DskipTests'
     }
   } else{
     echo "running for test true"
