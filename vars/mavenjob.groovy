@@ -9,7 +9,7 @@ def call(String test = 'false') {
     }
   } else{
     echo "running for test true"
-    mavenJob('mavenjob') {
+    maven {
       goals('clean install')
     }
   }
