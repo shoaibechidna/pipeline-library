@@ -4,7 +4,7 @@ def call(String test = 'false') {
   echo "received test=${test}"
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
-    mavenJob('mavenjob') {
+    maven {
       goals('clean install -DskipTests')
     }
   } else{
