@@ -3,7 +3,10 @@
 def call(test = 'false') {
   
     
-      sh '/usr/local/bin/mvn clean install -DskipTests=true'
+  maven {
+    goals('clean')
+    goals('install')
+  }
     
    
 }
