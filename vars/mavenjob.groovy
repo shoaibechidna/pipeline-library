@@ -3,10 +3,7 @@
 def call(test = 'false') {
   
     
-  maven {
-    goals('clean')
-    goals('install')
-  }
+  sh '#!/bin/bash mvn clean install'
     
    
 }
