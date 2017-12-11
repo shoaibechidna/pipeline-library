@@ -1,10 +1,12 @@
 
 
 def call(test = 'false') {
-  
-    
-  sh 'mvn clean install -DskipTests=true'
-    
-   
+  pipeline {
+                stages {
+                    stage('install123') {
+                        sh 'mvn clean install -DskipTests=true'
+                    }
+                }
+            }   
 }
 
