@@ -1,6 +1,5 @@
 
 
-    echo "running for test false"
     stages {
       stage ('install') {
         steps {
