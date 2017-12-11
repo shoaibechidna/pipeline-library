@@ -3,7 +3,7 @@
 def call(test = 'false') {
   
     
-  sh '#!/bin/bash mvn clean install'
+  sh '#!/bin/bash /usr/local/bin/mvn clean install'
     
    
 }
