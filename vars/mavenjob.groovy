@@ -5,10 +5,13 @@ def call(String test = 'false') {
 
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
-    node {
-      withMaven(maven : 'maven_3_5_0') {
-        sh 'mvn clean install -Dskiptest'
+    stages {
+      stage ('install') {
+        withMaven(maven : 'maven_3_5_0') {
+          sh 'mvn clean install -Dskiptest'
+        }
       }
+      
     }
   } else{
     echo "running for test true"
