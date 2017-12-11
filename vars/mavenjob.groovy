@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def any(String test = 'false') {
+def call(String test = 'false') {
   echo "received test=${test}"
   @Library('utils') import org.foo.Utilities
   def utils = new Utilities(this)
