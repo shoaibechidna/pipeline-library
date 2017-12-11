@@ -10,10 +10,9 @@ def call(String test = 'false') {
         steps {
           withMaven(maven : 'maven_3_5_0') {
           sh 'mvn clean install -Dskiptest'
-        }
-      }   
-     }
-      
+          }
+        }   
+      }  
     }
   } else{
     echo "running for test true"
