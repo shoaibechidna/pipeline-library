@@ -1,4 +1,4 @@
-#!/usr/bin/env groovy
+
 
     echo "running for test false"
     stages {
