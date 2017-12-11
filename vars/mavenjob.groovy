@@ -2,7 +2,6 @@
 
 def call(String test = 'false') {
   echo "received test=${test}"
-  @Library('utils') 
 
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
