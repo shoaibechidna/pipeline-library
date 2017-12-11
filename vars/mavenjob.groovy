@@ -3,7 +3,7 @@
 def call(String test = 'false') {
   echo "received test=${test}"
   @Library('utils') 
-  def utils = new Utilities(this)
+
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
     node {
