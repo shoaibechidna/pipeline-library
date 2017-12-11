@@ -6,7 +6,7 @@ def call(String test = 'false') {
   if (test.equalsIgnoreCase('false')) {
     echo "running for test false"
     node {
-      utils.mvn 'clean install -DskipTests'
+      mvn 'clean install -DskipTests'
     }
   } else{
     echo "running for test true"
