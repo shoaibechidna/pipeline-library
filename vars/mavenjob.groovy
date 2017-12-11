@@ -3,7 +3,7 @@
 def call(test = 'false') {
   
     
-      sh 'mvn clean install -DskipTests=true'
+      sh '/usr/local/bin/mvn clean install -DskipTests=true'
     
    
 }
