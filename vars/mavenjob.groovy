@@ -1,7 +1,12 @@
 
 
 def call(test = 'false') {
-  git 'https://github.com/shoaibechidna/pipeline-library.git'
- 
+  if ($test=='false') {
+    echo "for test=$test"
+    sh 'mvn clean install -DskipTests=true'
+  } else {
+    echo "for test=$test"
+    sh 'mvn clean install'
+  } 
 }
 
