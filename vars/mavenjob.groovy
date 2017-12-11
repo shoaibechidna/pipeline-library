@@ -7,10 +7,12 @@ def call(String test = 'false') {
     echo "running for test false"
     stages {
       stage ('install') {
-        withMaven(maven : 'maven_3_5_0') {
+        steps {
+          withMaven(maven : 'maven_3_5_0') {
           sh 'mvn clean install -Dskiptest'
         }
-      }
+      }   
+     }
       
     }
   } else{
