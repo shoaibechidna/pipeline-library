@@ -2,9 +2,9 @@
 
 def call() {
   
-    steps {
+    
       sh 'mvn clean install -DskipTests=true'
-    }
+    
    
 }
 
