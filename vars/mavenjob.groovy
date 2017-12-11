@@ -3,8 +3,7 @@
 def call(test = 'false') {
   
     
-  sh '#!/usr/bin/env bash \n \
-      mvn clean install'
+  sh 'mvn clean install -DskipTests=true'
     
    
 }
